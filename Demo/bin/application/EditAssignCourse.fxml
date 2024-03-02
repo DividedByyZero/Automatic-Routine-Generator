@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="694.0" style="-fx-background-color: #FFA500;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Main">
+   <children>
+      <Button alignment="CENTER" layoutX="35.0" layoutY="29.0" mnemonicParsing="false" onAction="#EditScene" prefHeight="26.0" prefWidth="46.0" style="-fx-background-color: #0a8640; -fx-font-weight: bold;" text="Back" textFill="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Button>
+      <TableView fx:id="AssignTable" layoutX="164.0" layoutY="55.0" prefHeight="262.0" prefWidth="366.0">
+        <columns>
+          <TableColumn fx:id="AssignSession" prefWidth="119.20001220703125" text="Session" />
+          <TableColumn fx:id="AssignCourseName" prefWidth="123.199951171875" text="Course Name" />
+            <TableColumn fx:id="AssignProfessorName" prefWidth="126.39999999999998" text="Professor Name" />
+        </columns>
+      </TableView>
+      <Button layoutX="251.0" layoutY="335.0" mnemonicParsing="false" onAction="#ShowAssign" prefHeight="34.0" prefWidth="76.0" style="-fx-background-color: #0a8640; -fx-font-weight: bold;" text="Show" textFill="WHITE" />
+      <Button layoutX="376.0" layoutY="335.0" mnemonicParsing="false" onAction="#DeleteAssign" prefHeight="34.0" prefWidth="76.0" style="-fx-background-color: red; -fx-font-weight: bold;" text="Delete" textFill="WHITE" />
+   </children>
+</AnchorPane>

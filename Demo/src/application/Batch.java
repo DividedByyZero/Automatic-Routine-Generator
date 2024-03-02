@@ -20,13 +20,5 @@ public class Batch extends Routine{
     }
     String BatchName;
     ArrayList<String> Courses = new ArrayList<String>();
-    void ShowRoutine(){
-        for(int i=0;i<5;i++){
-            for(int j=0;j<6;j++){
-                System.out.print(this.routine[i][j] + " ");
-            }
-            System.out.println("");
-        }
-    }
     Map<Integer,ArrayList<String>> Track = new HashMap<Integer,ArrayList<String>>();
 }

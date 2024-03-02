@@ -5,13 +5,12 @@ public class Course {
     String CourseCode;
     double credit;
     String BatchName;
-    String CourseTeacherName;
-
     String CourseProfessorName;
-    public Course(String s,double cr,String code){
+    public Course(String s,double cr,String code,String b){
         this.CourseName = s;
         this.credit = cr;
         this.CourseCode = code;
+        this.BatchName = b;
     }
     void ShowDetails(){
         System.out.println("Course Name : " + this.CourseName);

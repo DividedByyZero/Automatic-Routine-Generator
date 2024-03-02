@@ -5,6 +5,7 @@ import java.io.FileOutputStream;
 
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.PageSize;
 import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
@@ -12,10 +13,46 @@ import com.itextpdf.text.pdf.PdfWriter;
 
 public class Routine {
     String routine[][] = new String[5][6];
+    
+    
+    String getAlphaNumericString(int n) 
+    {  
+	     String AlphaNumericString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+	            + "0123456789"
+	            + "abcdefghijklmnopqrstuvxyz"; 
+	    
+	     StringBuilder sb = new StringBuilder(n); 
+	    
+	     for (int i = 0; i < n; i++) { 
+	      int index 
+	       = (int)(AlphaNumericString.length() 
+	         * Math.random());
+	      sb.append(AlphaNumericString 
+	         .charAt(index)); 
+	     } 
+	    
+	     return sb.toString(); 
+    } 
+    void ShowRoutine(){
+        for(int i=0;i<5;i++){
+            for(int j=0;j<6;j++){
+                System.out.print(this.routine[i][j] + " ");
+            }
+            System.out.println("");
+        }
+    }
+    void ClearRoutine(){
+        for(int i=0;i<5;i++){
+            for(int j=0;j<6;j++){
+                this.routine[i][j] = null;
+            }
+        }
+    }
+    
     void GeneratePdf(String s) {
-    	  Document document = new Document();
+    	  Document document = new Document(PageSize.A4.rotate());
           try {
-              PdfWriter pdfWriter = PdfWriter.getInstance(document, new FileOutputStream(s+".pdf"));
+              PdfWriter pdfWriter = PdfWriter.getInstance(document, new FileOutputStream(this.getAlphaNumericString(8)+"_"+s+".pdf"));
               document.open();
               document.add(new Paragraph(s));
 

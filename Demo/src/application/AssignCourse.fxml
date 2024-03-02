@@ -6,26 +6,25 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Main">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="508.0" prefWidth="808.0" style="-fx-background-color: #FFA500;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Main">
    <children>
-      <ChoiceBox fx:id="courselist" layoutX="203.0" layoutY="176.0" prefHeight="33.0" prefWidth="194.0" />
-      <ChoiceBox fx:id="professorlist" layoutX="203.0" layoutY="258.0" prefHeight="33.0" prefWidth="194.0" />
-      <Label alignment="CENTER" layoutX="203.0" layoutY="14.0" prefHeight="50.0" prefWidth="194.0" text="Assign Course">
+      <ChoiceBox fx:id="courselist" layoutX="317.0" layoutY="251.0" prefHeight="33.0" prefWidth="194.0" style="-fx-background-color: #FFFFFF;" />
+      <ChoiceBox fx:id="professorlist" layoutX="317.0" layoutY="333.0" prefHeight="33.0" prefWidth="194.0" style="-fx-background-color: #FFFFFF;" />
+      <Label alignment="CENTER" layoutX="317.0" layoutY="89.0" prefHeight="50.0" prefWidth="194.0" style="-fx-font-weight: bold;" text="Assign Course" textFill="#0a8640">
          <font>
             <Font size="29.0" />
          </font>
       </Label>
-      <Label layoutX="203.0" layoutY="149.0" text="Course" />
-      <Label layoutX="203.0" layoutY="233.0" text="Professor" />
-      <Button layoutX="248.0" layoutY="340.0" mnemonicParsing="false" onAction="#CourseAssignment" prefHeight="34.0" prefWidth="103.0" text="Assign" />
-      <Button layoutX="272.0" layoutY="304.0" mnemonicParsing="false" onAction="#refreshAssignCourse" text="Refresh" />
-      <Button alignment="CENTER" layoutX="45.0" layoutY="42.0" mnemonicParsing="false" onAction="#MainScene" prefHeight="26.0" prefWidth="46.0" text="Home">
+      <Label layoutX="317.0" layoutY="224.0" style="-fx-font-weight: bold;" text="Course" textFill="WHITE" />
+      <Label layoutX="317.0" layoutY="308.0" style="-fx-font-weight: bold;" text="Professor" textFill="WHITE" />
+      <Button layoutX="362.0" layoutY="384.0" mnemonicParsing="false" onAction="#CourseAssignment" prefHeight="34.0" prefWidth="103.0" style="-fx-background-color: #0a8640; -fx-font-weight: bold;" text="Assign" textFill="WHITE" />
+      <Button layoutX="523.0" layoutY="254.0" mnemonicParsing="false" onAction="#Find" prefHeight="26.0" prefWidth="59.0" style="-fx-background-color: #0a8640; -fx-font-weight: bold;" text="Find" textFill="WHITE" />
+      <Button alignment="CENTER" layoutX="45.0" layoutY="42.0" mnemonicParsing="false" onAction="#MainScene" prefHeight="26.0" prefWidth="46.0" style="-fx-background-color: #0a8640; -fx-font-weight: bold;" text="Home" textFill="WHITE">
          <font>
             <Font size="10.0" />
          </font>
       </Button>
-      <ChoiceBox fx:id="batchlist" layoutX="203.0" layoutY="101.0" prefHeight="33.0" prefWidth="194.0" />
-      <Label layoutX="203.0" layoutY="74.0" text="Session" />
+      <ChoiceBox fx:id="batchlist" layoutX="317.0" layoutY="176.0" onMouseClicked="#refresh" prefHeight="33.0" prefWidth="194.0" style="-fx-background-color: #FFFFFF;" />
+      <Label layoutX="317.0" layoutY="149.0" style="-fx-font-weight: bold;" text="Session" textFill="WHITE" />
    </children>
 </AnchorPane>

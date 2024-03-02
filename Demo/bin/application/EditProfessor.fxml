@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="863.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Main">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="652.0" prefWidth="863.0" style="-fx-background-color: #FFA500;">
+         <children>
+            <TextField fx:id="edit_professorname" layoutX="182.0" layoutY="421.0" prefHeight="47.0" prefWidth="230.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></TextField>
+            <Label layoutX="182.0" layoutY="395.0" prefHeight="18.0" prefWidth="106.0" style="-fx-font-weight: bold;" text="Professor Name" textFill="WHITE" />
+            <Label layoutX="182.0" layoutY="490.0" prefHeight="18.0" prefWidth="106.0" style="-fx-font-weight: bold;" text="Designation" textFill="WHITE" />
+            <Label alignment="CENTER" layoutX="182.0" layoutY="26.0" prefHeight="59.0" prefWidth="289.0" style="-fx-font-weight: bold;" text="Edit Professor" textFill="#0a8640">
+               <font>
+                  <Font size="41.0" />
+               </font>
+            </Label>
+            <CheckBox fx:id="check_professor" layoutX="273.0" layoutY="490.0" mnemonicParsing="false" style="-fx-font-weight: bold;" text="Professor" textFill="WHITE" />
+            <CheckBox fx:id="check_associateprofessor" layoutX="361.0" layoutY="490.0" mnemonicParsing="false" style="-fx-font-weight: bold;" text="Associate Professor" textFill="WHITE" />
+            <CheckBox fx:id="check_assistantprofessor" layoutX="508.0" layoutY="490.0" mnemonicParsing="false" style="-fx-font-weight: bold;" text="Assistant Professor" textFill="WHITE" />
+            <Button layoutX="443.0" layoutY="550.0" mnemonicParsing="false" onAction="#updateProfessor" prefHeight="47.0" prefWidth="230.0" style="-fx-background-color: #0a8640; -fx-font-weight: bold;" text="Update" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" layoutX="37.0" layoutY="30.0" mnemonicParsing="false" onAction="#EditScene" prefHeight="26.0" prefWidth="46.0" style="-fx-background-color: #0a8640; -fx-font-weight: bold;" text="Back" textFill="WHITE">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <CheckBox fx:id="check_lecturer" layoutX="652.0" layoutY="490.0" mnemonicParsing="false" style="-fx-font-weight: bold;" text="Lecturer" textFill="WHITE" />
+            <TextField fx:id="edit_professorcode" layoutX="182.0" layoutY="550.0" prefHeight="47.0" prefWidth="230.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <Label layoutX="182.0" layoutY="530.0" prefHeight="18.0" prefWidth="106.0" style="-fx-font-weight: bold;" text="Professor Code" textFill="WHITE" />
+            <TextField fx:id="edit_professornumber" layoutX="443.0" layoutY="421.0" prefHeight="47.0" prefWidth="230.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <Label layoutX="443.0" layoutY="395.0" prefHeight="18.0" prefWidth="106.0" style="-fx-font-weight: bold;" text="Phone Number" textFill="WHITE" />
+            <TableView fx:id="ProfessorTable" layoutX="182.0" layoutY="89.0" onMouseClicked="#ProfessorCommit" prefHeight="258.0" prefWidth="490.0">
+              <columns>
+                <TableColumn fx:id="editprofname" prefWidth="140.79998779296875" text="Professor Name" />
+                <TableColumn fx:id="editnumber" minWidth="9.60003662109375" prefWidth="112.00006103515625" text="Phone Number" />
+                  <TableColumn fx:id="editdesignation" minWidth="9.60003662109375" prefWidth="112.00006103515625" text="Designation" />
+                  <TableColumn fx:id="editprofcode" minWidth="9.60003662109375" prefWidth="115.20004882812498" text="Professor Code" />
+              </columns>
+            </TableView>
+            <Button layoutX="472.0" layoutY="356.0" mnemonicParsing="false" onAction="#showProfessor" prefHeight="8.0" prefWidth="86.0" style="-fx-background-color: #0a8640; -fx-font-weight: bold;" text="Show" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="587.0" layoutY="356.0" mnemonicParsing="false" onAction="#DeleteProfessor" prefHeight="31.0" prefWidth="86.0" style="-fx-background-color: red; -fx-font-weight: bold;" text="Delete" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
